@@ -31,7 +31,7 @@ resource "aws_ecs_service" "service" {
     subnets = module.vpc.public_subnets
   }
 
-  # lifecycle {
-  #   ignore_changes = [task_definition]
-  # }
+  lifecycle {
+    ignore_changes = [task_definition]
+  }
 }
